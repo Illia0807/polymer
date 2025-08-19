@@ -1,17 +1,17 @@
 # app.py
 __import__('pysqlite3')
 import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
+# А вот теперь все остальные импорты
 import streamlit as st
 import pandas as pd
 import joblib
 from rdkit import Chem
 from rdkit.Chem import Descriptors
 import numpy as np
-import chromadb
+import chromadb # Теперь этот импорт будет работать
 import os
-
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # Get the absolute path of the current directory where the app is located
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
