@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+scikit-learn
+lightgbm
+rdkit
+chromadb
+hnswlib
+joblib
+tqdm
